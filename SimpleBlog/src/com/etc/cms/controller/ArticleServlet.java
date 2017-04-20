@@ -131,6 +131,20 @@ System.out.println("Tag≤È—Ø"+pages.size());
 
 			int articleId=Integer.valueOf(request.getParameter("articleId"));
 
+			String getPage=request.getParameter("getPage");
+			
+			while(dao.queryById(articleId)==null){
+				
+				if(getPage.equals("next")){
+					articleId++;
+				}else if(getPage.equals("prev")){
+					articleId--;
+				}
+				
+			}
+			
+System.out.println(articleId);
+			
 			Article article=dao.queryById(articleId);
 
 			System.out.println(article.getTag());			

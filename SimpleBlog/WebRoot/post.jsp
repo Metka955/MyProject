@@ -154,7 +154,7 @@ body {
 							<c:when test="${article.articleId == minIndex }">
 							</c:when>
 							<c:otherwise>
-								<a href="ArticleServlet?op=post&articleId=${article.articleId-1}">←上一页</a>
+								<a href="ArticleServlet?getPage=prev&op=post&articleId=${article.articleId-1}">←上一篇</a>
 							</c:otherwise>
 						</c:choose>
 						
@@ -166,7 +166,7 @@ body {
 							<c:when test="${article.articleId == maxIndex }">
 							</c:when>
 							<c:otherwise>
-								<a href="ArticleServlet?op=post&articleId=${article.articleId+1}">下一篇→</a>
+								<a href="ArticleServlet?getPage=next&op=post&articleId=${article.articleId+1}">下一篇→</a>
 							</c:otherwise>
 						</c:choose>
 						<!-- <a href="http://congqianyouzhiyu.lofter.com/post/1d6754a0_f2cb048">下一篇→</a> -->
@@ -195,6 +195,9 @@ body {
 						<!-发布按钮-->
 						<label>发布</label>
 					</div>
+					
+					
+					
 				</div>
 
 			</div>
@@ -208,7 +211,7 @@ body {
 							<c:when test="${article.articleId == minIndex }">
 							</c:when>
 							<c:otherwise>
-								<a href="ArticleServlet?op=post&articleId=${article.articleId-1}">&lt;&lt;上一篇</a>
+								<a href="ArticleServlet?getPage=prev&op=post&articleId=${article.articleId-1}">&lt;&lt;上一篇</a>
 							</c:otherwise>
 						</c:choose>
 					
@@ -225,7 +228,7 @@ body {
 							<c:when test="${article.articleId == maxIndex }">
 							</c:when>
 							<c:otherwise>
-								<a href="ArticleServlet?op=post&articleId=${article.articleId+1}">下一篇&gt;&gt;</a>
+								<a href="ArticleServlet?getPage=next&op=post&articleId=${article.articleId+1}">下一篇&gt;&gt;</a>
 							</c:otherwise>
 						</c:choose>
 						
