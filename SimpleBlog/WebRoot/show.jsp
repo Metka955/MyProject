@@ -94,7 +94,7 @@ a,a:hover,.page a:hover {
 					<div class="sidel">
 						<ul class="block label">
 							<li style="padding:0px"><a
-								href="ArticleServlet?op=post&articleId=${arti.articleId }">2017-04-14</a></li>
+								href="ArticleServlet?op=post&articleId=${arti.articleId }">${arti.pubDate.substring(0,arti.pubDate.indexOf(" ")) }</a></li>
 							<li style="padding:0px"><a
 								href="ArticleServlet?op=post&articleId=${arti.articleId }">全文链接</a></li>
 							<li style="padding:0px"><a 

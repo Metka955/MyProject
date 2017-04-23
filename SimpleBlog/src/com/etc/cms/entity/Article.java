@@ -6,8 +6,10 @@ public class Article {
 	private String title;
 	private String content;
 	private String pubDate;
-	private String authorName;
 	private int clickCount;
+	
+	//写文章的用户 userId外键
+	private int userId;
 	
 	//文章标签 用空格隔开
 	private String tag;
@@ -17,15 +19,22 @@ public class Article {
 	}
 
 	public Article(String title, String content, String pubDate,
-			String authorName, int clickCount) {
+			 int clickCount,int userId) {
 		super();
 		this.title = title;
 		this.content = content;
 		this.pubDate = pubDate;
-		this.authorName = authorName;
 		this.clickCount = clickCount;
+		this.userId=userId;
 	}
-	
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 
 	public String getTag() {
 		return tag;
@@ -67,13 +76,7 @@ public class Article {
 		this.pubDate = pubDate;
 	}
 
-	public String getAuthorName() {
-		return authorName;
-	}
-
-	public void setAuthorName(String authorName) {
-		this.authorName = authorName;
-	}
+	
 
 	public int getClickCount() {
 		return clickCount;
@@ -86,9 +89,11 @@ public class Article {
 	@Override
 	public String toString() {
 		return "Article [articleId=" + articleId + ", title=" + title
-				+ ", content=" + content + ", pubDate=" + pubDate
-				+ ", authorName=" + authorName + ", clickCount=" + clickCount
+				+ ", pubDate=" + pubDate
+				+ ", clickCount=" + clickCount + ", userId=" + userId
 				+ ", tag=" + tag + "]";
-	}	
+	}
+
+	
 	
 }

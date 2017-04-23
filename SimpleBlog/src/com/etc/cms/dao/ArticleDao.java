@@ -21,9 +21,10 @@ public class ArticleDao {
 		params[0]=article.getTitle();
 		params[1]=article.getContent();
 		params[2]=article.getPubDate();
-		params[3]=article.getAuthorName();
-		params[4]=article.getClickCount();		
-		params[5]=article.getTag();	
+		params[3]=article.getClickCount();		
+		params[4]=article.getTag();	
+		
+		params[5]=article.getUserId();
 		return BaseDao.execute(sql, params)>0;		
 	}
 	
